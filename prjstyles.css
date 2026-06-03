@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   background: #121212;
   color: #f0f0f0;
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -12,8 +13,10 @@ body {
   color: white;
   text-align: center;
   padding: 15px;
-  letter-spacing: 2px;
-  position: relative;
+  letter-spacing: 1.5px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* CART ICON */
@@ -37,6 +40,7 @@ body {
   left: 10%;
   transform: translateY(-50%);
   color: #fff;
+  transition: opacity 0.6s ease;
 }
 
 .hero-overlay h1 {
@@ -67,6 +71,14 @@ body {
 /* SECTIONS */
 .categories, .shop {
   padding: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
@@ -80,11 +92,12 @@ h2 {
   padding: 15px;
   margin: 30px 0;
   border-radius: 12px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 /* SIDE BY SIDE */
@@ -104,15 +117,6 @@ h2 {
   width: 100%;
   height: auto;
   border-radius: 12px;
-}
-
-/* INDIVIDUAL IMAGE CLASSES */
-.official-img,
-.casual-img,
-.sporty-img,
-.vans-img,
-.converse-img {
-  background: #000; /* uniform dark background */
 }
 
 /* SHOP PRODUCTS */
@@ -141,25 +145,46 @@ button {
 
 button:hover {
   background: #8a2be2;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+  background: #1e1e1e;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #8a2be2;
 }
 
 /* RESPONSIVE RULES */
 @media (max-width: 768px) {
   .horizontal {
-    flex-direction: column; /* stack image & video vertically */
+    flex-direction: column;
   }
 
   .hero-images {
-    flex-direction: column; /* stack hero images */
+    flex-direction: column;
     align-items: center;
   }
 
   .hero-images img {
-    max-width: 90%; /* shrink on phone */
+    max-width: 90%;
   }
 
   .hero-overlay {
-    left: 5%; /* less margin on small screens */
+    left: 5%;
     text-align: center;
   }
 
