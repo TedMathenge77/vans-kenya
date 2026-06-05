@@ -10,20 +10,21 @@
 
 <body>
 <header class="main-header">
-  <h1 class="site-title">Catalogue</h1>
-  <div class="cart-icon">🛒</div>
+  <div class="header-left">
+    <img src="images/vans-wave.png" alt="Vans Logo" class="logo">
+    <h1 class="site-title">Catalogue</h1>
+  </div>
+  <div class="cart-icon" onclick="openCart()">🛒 <span id="cart-count">0</span></div>
 </header>
 
 <section class="shop reveal">
   <h2>Our Collection</h2>
-
-  <!-- Back to Home button -->
   <button onclick="location.href='index.html'" class="back-home">← Back to Home</button>
 
   <div class="catalogue-grid">
-    <!-- Product 1 -->
+    <!-- Product Template -->
     <div class="card product">
-      <img src="images/product1.jpeg" alt="Product 1">
+      <img src="images/product1.jpeg" alt="Product 1" class="product-img">
       <h3>V001</h3>
       <p>KES 2500</p>
       <label for="size-V001">Size (UK):</label>
@@ -33,12 +34,15 @@
       </select>
       <label for="location-V001">Pickup location:</label>
       <input type="text" id="location-V001" placeholder="Enter pickup location">
+      <label for="qty-V001">Quantity:</label>
+      <input type="number" id="qty-V001" min="1" value="1">
+      <button onclick="addToCart('V001')">Add to Cart</button>
       <button onclick="order('V001')">Order Now</button>
     </div>
 
-    <!-- Product 2 -->
+    <!-- Repeat for V002–V006 -->
     <div class="card product">
-      <img src="images/product2.jpeg" alt="Product 2">
+      <img src="images/product2.jpeg" alt="Product 2" class="product-img">
       <h3>V002</h3>
       <p>KES 2500</p>
       <label for="size-V002">Size (UK):</label>
@@ -48,12 +52,14 @@
       </select>
       <label for="location-V002">Pickup location:</label>
       <input type="text" id="location-V002" placeholder="Enter pickup location">
+      <label for="qty-V002">Quantity:</label>
+      <input type="number" id="qty-V002" min="1" value="1">
+      <button onclick="addToCart('V002')">Add to Cart</button>
       <button onclick="order('V002')">Order Now</button>
     </div>
 
-    <!-- Product 3 -->
     <div class="card product">
-      <img src="images/product3.jpeg" alt="Product 3">
+      <img src="images/product3.jpeg" alt="Product 3" class="product-img">
       <h3>V003</h3>
       <p>KES 2500</p>
       <label for="size-V003">Size (UK):</label>
@@ -63,12 +69,14 @@
       </select>
       <label for="location-V003">Pickup location:</label>
       <input type="text" id="location-V003" placeholder="Enter pickup location">
+      <label for="qty-V003">Quantity:</label>
+      <input type="number" id="qty-V003" min="1" value="1">
+      <button onclick="addToCart('V003')">Add to Cart</button>
       <button onclick="order('V003')">Order Now</button>
     </div>
 
-    <!-- Product 4 -->
     <div class="card product">
-      <img src="images/product4.jpeg" alt="Product 4">
+      <img src="images/product4.jpeg" alt="Product 4" class="product-img">
       <h3>V004</h3>
       <p>KES 2500</p>
       <label for="size-V004">Size (UK):</label>
@@ -78,12 +86,14 @@
       </select>
       <label for="location-V004">Pickup location:</label>
       <input type="text" id="location-V004" placeholder="Enter pickup location">
+      <label for="qty-V004">Quantity:</label>
+      <input type="number" id="qty-V004" min="1" value="1">
+      <button onclick="addToCart('V004')">Add to Cart</button>
       <button onclick="order('V004')">Order Now</button>
     </div>
 
-    <!-- Product 5 -->
     <div class="card product">
-      <img src="images/product5.jpeg" alt="Product 5">
+      <img src="images/product5.jpeg" alt="Product 5" class="product-img">
       <h3>V005</h3>
       <p>KES 2500</p>
       <label for="size-V005">Size (UK):</label>
@@ -93,12 +103,14 @@
       </select>
       <label for="location-V005">Pickup location:</label>
       <input type="text" id="location-V005" placeholder="Enter pickup location">
+      <label for="qty-V005">Quantity:</label>
+      <input type="number" id="qty-V005" min="1" value="1">
+      <button onclick="addToCart('V005')">Add to Cart</button>
       <button onclick="order('V005')">Order Now</button>
     </div>
 
-    <!-- Product 6 -->
     <div class="card product">
-      <img src="images/product6.jpeg" alt="Product 6">
+      <img src="images/product6.jpeg" alt="Product 6" class="product-img">
       <h3>V006</h3>
       <p>KES 2500</p>
       <label for="size-V006">Size (UK):</label>
@@ -108,14 +120,44 @@
       </select>
       <label for="location-V006">Pickup location:</label>
       <input type="text" id="location-V006" placeholder="Enter pickup location">
+      <label for="qty-V006">Quantity:</label>
+      <input type="number" id="qty-V006" min="1" value="1">
+      <button onclick="addToCart('V006')">Add to Cart</button>
       <button onclick="order('V006')">Order Now</button>
     </div>
   </div>
 </section>
 
+<!-- REVIEWS SECTION -->
+<section class="reviews reveal">
+  <h2>Customer Reviews</h2>
+  <div class="review-card">
+    <p>"Great quality Vans, delivery was fast!" – Archlues</p>
+  </div>
+  <div class="review-card">
+    <p>"Converse All Star fits perfectly. Highly recommend." – Sarah</p>
+  </div>
+  <div class="review-card">
+    <p>"Loved the clean design and easy ordering via WhatsApp." – Brian</p>
+  </div>
+</section>
+
+<!-- DELIVERY INFO -->
+<section class="delivery-info reveal">
+  <h2>Delivery & Payment</h2>
+  <p>We deliver across Kenya within 24–48 hours.</p>
+  <p>Pay securely with <strong>Mpesa</strong> at checkout.</p>
+  <button onclick="checkout()">Pay with Mpesa</button>
+</section>
+
+<!-- CONTACT US -->
+<section class="contact-us reveal">
+  <h2>Contact Us</h2>
+  <p>Call or WhatsApp us at: <a href="tel:0701484665">0701484665</a></p>
+</section>
+
 <footer class="footer">
   <p>&copy; 2026 Vans Kenya</p>
-  <p>teddmathenge</p>
 </footer>
 </body>
 </html>
