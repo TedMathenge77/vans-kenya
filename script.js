@@ -1,4 +1,4 @@
-// WhatsApp order function with size + pickup location
+// ---------------- WHATSAPP ORDER FUNCTION ----------------
 function order(product) {
   let phone = "254701484665"; // your WhatsApp number
 
@@ -130,3 +130,20 @@ window.addEventListener("scroll", () => {
 
 // Initialize cart count on load
 document.addEventListener("DOMContentLoaded", updateCartCount);
+
+// ---------------- SLIDESHOW ----------------
+let slideIndex = 0;
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("fade");
+  setTimeout(showSlides, 4000); // Change slide every 4 seconds
+}
+
+// Start slideshow when DOM is ready
+document.addEventListener("DOMContentLoaded", showSlides);
