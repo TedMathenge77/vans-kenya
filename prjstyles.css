@@ -206,7 +206,7 @@ button:hover {
 }
 
 .slide img {
-  max-width: 500px; /* slightly smaller than Explore Styles (250px) */
+  max-width: 300px; /* slightly smaller than Explore Styles (250px) */
   height: auto;
   border-radius: 12px;
   margin: 0 auto;
