@@ -22,7 +22,6 @@ function order(product) {
 // ---------------- CART SYSTEM ----------------
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Add to Cart
 function addToCart(product) {
   let sizeField = document.getElementById("size-" + product);
   let locationField = document.getElementById("location-" + product);
@@ -40,14 +39,12 @@ function addToCart(product) {
   alert(`${product} added to cart!`);
 }
 
-// Update cart count badge
 function updateCartCount() {
   let count = cart.reduce((sum, item) => sum + item.qty, 0);
   let badge = document.getElementById("cart-count");
   if (badge) badge.textContent = count;
 }
 
-// Open cart modal
 function openCart() {
   let modal = document.querySelector(".cart-modal");
   if (!modal) {
@@ -58,7 +55,7 @@ function openCart() {
 
   modal.innerHTML = `
     <h2>Your Cart</h2>
-    ${cart.map((item, i) => `
+    ${cart.map((item) => `
       <div class="cart-item">
         <span>${item.product} (${item.size || "Size?"}) x${item.qty}</span>
         <span>KES ${item.price * item.qty}</span>
@@ -74,13 +71,11 @@ function openCart() {
   modal.classList.add("active");
 }
 
-// Close cart modal
 function closeCart() {
   let modal = document.querySelector(".cart-modal");
   if (modal) modal.classList.remove("active");
 }
 
-// Clear cart
 function clearCart() {
   cart = [];
   localStorage.removeItem("cart");
@@ -89,7 +84,6 @@ function clearCart() {
   alert("Cart cleared!");
 }
 
-// Checkout flow (Mpesa + WhatsApp)
 function checkout() {
   let phone = "254701484665";
   let summary = cart.map(item => `${item.product} (${item.size || "Size?"}) x${item.qty} @ KES ${item.price * item.qty}`).join("\n");
@@ -102,7 +96,6 @@ function checkout() {
 }
 
 // ---------------- EFFECTS ----------------
-// Scroll reveal effect
 window.addEventListener("scroll", () => {
   const reveals = document.querySelectorAll(".reveal");
   for (let i = 0; i < reveals.length; i++) {
@@ -118,7 +111,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Sticky header shadow
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".main-header");
   if (window.scrollY > 50) {
@@ -128,22 +120,34 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Initialize cart count on load
 document.addEventListener("DOMContentLoaded", updateCartCount);
 
-// ---------------- SLIDESHOW ----------------
-let slideIndex = 0;
-function showSlides() {
-  let slides = document.getElementsByClassName("slide");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+// ---------------- MULTIPLE SLIDESHOWS WITH FADE ----------------
+function startSlideshow(containerSelector, interval = 4000) {
+  let slides = document.querySelectorAll(`${containerSelector} .slide`);
+  let index = 0;
+
+  if (slides.length > 0) {
+    slides[0].style.opacity = 1; // show first immediately
   }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
-  slides[slideIndex - 1].classList.add("fade");
-  setTimeout(showSlides, 4000); // Change slide every 4 seconds
+
+  function show() {
+    let current = slides[index];
+    let next = slides[(index + 1) % slides.length];
+
+    current.style.opacity = 0;
+    next.style.opacity = 1;
+
+    index = (index + 1) % slides.length;
+    setTimeout(show, interval);
+  }
+
+  if (slides.length > 1) {
+    setTimeout(show, interval);
+  }
 }
 
-// Start slideshow when DOM is ready
-document.addEventListener("DOMContentLoaded", showSlides);
+document.addEventListener("DOMContentLoaded", () => {
+  startSlideshow(".hero-slideshow", 6000);       // Hero background slideshow (slower, calmer)
+  startSlideshow(".slideshow-container", 4000);  // Categories slideshow (faster)
+});
