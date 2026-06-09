@@ -1,8 +1,7 @@
 // ---------------- WHATSAPP ORDER FUNCTION ----------------
 function order(product) {
-  let phone = "254701484665"; // your WhatsApp number
+  let phone = "254701484665";
 
-  // Get size, location, and quantity fields by product ID (only exist in catalogue.html)
   let sizeField = document.getElementById("size-" + product);
   let locationField = document.getElementById("location-" + product);
   let qtyField = document.getElementById("qty-" + product);
@@ -11,10 +10,8 @@ function order(product) {
   let location = locationField ? locationField.value : "";
   let qty = qtyField ? qtyField.value : "1";
 
-  // Build message
   let message = `Hello, I want to order: ${product}\nSize: ${size || "[please enter]"}\nPickup location: ${location || "[please enter]"}\nQuantity: ${qty}`;
 
-  // Open WhatsApp
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 }
@@ -47,6 +44,7 @@ function updateCartCount() {
 
 function openCart() {
   let modal = document.querySelector(".cart-modal");
+
   if (!modal) {
     modal = document.createElement("div");
     modal.className = "cart-modal";
@@ -54,20 +52,31 @@ function openCart() {
   }
 
   modal.innerHTML = `
-    <h2>Your Cart</h2>
-    ${cart.map((item) => `
-      <div class="cart-item">
-        <span>${item.product} (${item.size || "Size?"}) x${item.qty}</span>
-        <span>KES ${item.price * item.qty}</span>
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+
+      ${cart.length === 0 ? "<p>Your cart is empty</p>" : ""}
+
+      ${cart.map((item) => `
+        <div class="cart-item">
+          <span>${item.product} (${item.size || "Size?"}) x${item.qty}</span>
+          <span>KES ${item.price * item.qty}</span>
+        </div>
+      `).join("")}
+
+      <div class="cart-total">
+        Total: KES ${cart.reduce((sum, item) => sum + item.price * item.qty, 0)}
       </div>
-    `).join("")}
-    <div class="cart-total">Total: KES ${cart.reduce((sum, item) => sum + item.price * item.qty, 0)}</div>
-    <p><strong>Payment:</strong> Mpesa Paybill 123456, Account: VansKenya</p>
-    <p><strong>Delivery:</strong> Enter your location during checkout</p>
-    <button class="checkout-btn" onclick="checkout()">Checkout via WhatsApp</button>
-    <button class="checkout-btn" onclick="clearCart()">Clear Cart</button>
-    <button class="checkout-btn" onclick="closeCart()">Close</button>
+
+      <p><strong>Payment:</strong> Mpesa Send Money 0701484665, Account: Edwin Mathenge</p>
+      <p><strong>Delivery:</strong> Enter your location during checkout</p>
+
+      <button class="checkout-btn" onclick="checkout()">Checkout via WhatsApp</button>
+      <button class="checkout-btn" onclick="clearCart()">Clear Cart</button>
+      <button class="checkout-btn" onclick="closeCart()">Close</button>
+    </div>
   `;
+
   modal.classList.add("active");
 }
 
@@ -86,7 +95,11 @@ function clearCart() {
 
 function checkout() {
   let phone = "254701484665";
-  let summary = cart.map(item => `${item.product} (${item.size || "Size?"}) x${item.qty} @ KES ${item.price * item.qty}`).join("\n");
+
+  let summary = cart.map(item =>
+    `${item.product} (${item.size || "Size?"}) x${item.qty} @ KES ${item.price * item.qty}`
+  ).join("\n");
+
   let total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 
   let message = `Hello, I want to checkout:\n${summary}\nTotal: KES ${total}\n\nPayment: Mpesa\nPaybill: 123456\nAccount: VansKenya\n\nDelivery: [please enter location]\n\nFor help, call/WhatsApp: 0701484665`;
@@ -122,13 +135,13 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", updateCartCount);
 
-// ---------------- MULTIPLE SLIDESHOWS WITH FADE ----------------
+// ---------------- MULTIPLE SLIDESHOWS ----------------
 function startSlideshow(containerSelector, interval = 4000) {
   let slides = document.querySelectorAll(`${containerSelector} .slide`);
   let index = 0;
 
   if (slides.length > 0) {
-    slides[0].style.opacity = 1; // show first immediately
+    slides[0].style.opacity = 1;
   }
 
   function show() {
@@ -148,6 +161,6 @@ function startSlideshow(containerSelector, interval = 4000) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  startSlideshow(".hero-slideshow", 6000);       // Hero background slideshow (slower, calmer)
-  startSlideshow(".slideshow-container", 4000);  // Categories slideshow (faster)
+  startSlideshow(".hero-slideshow", 6000);
+  startSlideshow(".slideshow-container", 4000);
 });
