@@ -22,7 +22,8 @@
   <button onclick="location.href='index.html'" class="back-home">← Back to Home</button>
 
   <div class="catalogue-grid">
-    <!-- Product Template -->
+    <!-- Products V001–V012 -->
+    <!-- Template repeated for each product -->
     <div class="card product">
       <img src="images/product1.jpeg" alt="Product 1" class="product-img">
       <h3>V001</h3>
@@ -40,7 +41,6 @@
       <button onclick="order('V001')">Order Now</button>
     </div>
 
-    <!-- Repeat for V002–V006 -->
     <div class="card product">
       <img src="images/product2.jpeg" alt="Product 2" class="product-img">
       <h3>V002</h3>
@@ -125,37 +125,108 @@
       <button onclick="addToCart('V006')">Add to Cart</button>
       <button onclick="order('V006')">Order Now</button>
     </div>
-  </div>
-</section>
 
-<!-- REVIEWS SECTION -->
-<section class="reviews reveal">
-  <h2>Customer Reviews</h2>
-  <div class="review-card">
-    <p>"Great quality Vans, delivery was fast!" – Archlues</p>
-  </div>
-  <div class="review-card">
-    <p>"Converse All Star fits perfectly. Highly recommend." – Sarah</p>
-  </div>
-  <div class="review-card">
-    <p>"Loved the clean design and easy ordering via WhatsApp." – Brian</p>
-  </div>
-</section>
+    <!-- New products V007–V012 -->
+    <div class="card product">
+      <img src="images/product7.jpeg" alt="Product 7" class="product-img">
+      <h3>V007</h3>
+      <p>KES 2500</p>
+      <label for="size-V007">Size (UK):</label>
+      <select id="size-V007">
+        <option value="">Select size</option>
+        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+      </select>
+      <label for="location-V007">Pickup location:</label>
+      <input type="text" id="location-V007" placeholder="Enter pickup location">
+      <label for="qty-V007">Quantity:</label>
+      <input type="number" id="qty-V007" min="1" value="1">
+      <button onclick="addToCart('V007')">Add to Cart</button>
+      <button onclick="order('V007')">Order Now</button>
+    </div>
 
-<!-- DELIVERY INFO -->
+    <div class="card product">
+      <img src="images/product8.jpeg" alt="Product 8" class="product-img">
+      <h3>V008</h3>
+      <p>KES 2500</p>
+      <label for="size-V008">Size (UK):</label>
+      <select id="size-V008">
+        <option value="">Select size</option>
+        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+      </select>
+      <label for="location-V008">Pickup location:</label>
+      <input type="text" id="location-V008" placeholder="Enter pickup location">
+      <label for="qty-V008">Quantity:</label>
+      <input type="number" id="qty-V008" min="1" value="1">
+      <button onclick="addToCart('V008')">Add to Cart</button>
+      <button onclick="order('V008')">Order Now</button>
+    </div>
 
-  <p>Pay securely with <strong>Mpesa</strong> at checkout.</p>
-  <button onclick="checkout()">Pay with Mpesa</button>
-</section>
+    <div class="card product">
+      <img src="images/product9.jpeg" alt="Product 9" class="product-img">
+      <h3>V009</h3>
+      <p>KES 2500</p>
+      <label for="size-V009">Size (UK):</label>
+      <select id="size-V009">
+        <option value="">Select size</option>
+        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+      </select>
+      <label for="location-V009">Pickup location:</label>
+      <input type="text" id="location-V009" placeholder="Enter pickup location">
+      <label for="qty-V009">Quantity:</label>
+      <input type="number" id="qty-V009" min="1" value="1">
+      <button onclick="addToCart('V009')">Add to Cart</button>
+      <button onclick="order('V009')">Order Now</button>
+    </div>
 
-<!-- CONTACT US -->
-<section class="contact-us reveal">
-  <h2>Contact Us</h2>
-  <p>Call or WhatsApp us at: <a href="tel:0701484665">0701484665</a></p>
-</section>
+    <div class="card product">
+      <img src="images/product10.jpeg" alt="Product 10" class="product-img">
+      <h3>V010</h3>
+      <p>KES 2500</p>
+      <label for="size-V010">Size (UK):</label>
+      <select id="size-V010">
+        <option value="">Select size</option>
+        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+      </select>
+      <label for="location-V010">Pickup location:</label>
+      <input type="text" id="location-V010" placeholder="Enter pickup location">
+      <label for="qty-V010">Quantity:</label>
+      <input type="number" id="qty-V010" min="1" value="1">
+      <button onclick="addToCart('V010')">Add to Cart</button>
+      <button onclick="order('V010')">Order Now</button>
+    </div>
 
-<footer class="footer">
-  <p>&copy; 2026 Vans Kenya</p>
-</footer>
-</body>
-</html>
+    <div class="card product">
+      <img src="images/product11.jpeg" alt="Product 11" class="product-img">
+      <h3>V011</h3>
+      <p>KES 2500</p>
+      <label for="size-V011">Size (UK):</label>
+      <select id="size-V011">
+        <option value="">Select size</option>
+        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+      </select>
+      <label for="location-V011">Pickup location:</label>
+      <input type="text" id="location-V011" placeholder="Enter pickup location">
+      <label for="qty-V011">Quantity:</label>
+      <input type="number" id="qty-V011" min="1" value="1">
+      <button onclick="addToCart('V011')">Add to Cart</button>
+      <button onclick="order('V011')">Order Now</button>
+    </div>
+
+    <div class="card product">
+      <img src="images/product12.jpeg" alt="Product 12" class="product-img">
+      <h3>V012</h3>
+      <p>KES 2500</p>
+      <label for="size-V012">Size (UK):</label>
+      <select id="size-V012">
+        <option value="">Select size</option>
+        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+      </select>
+      <label for="location-V012">Pickup location:</label>
+      <input type="text" id="location-V012" placeholder="Enter pickup location">
+      <label for="qty-V012">Quantity:</label>
+      <input type="number" id="qty-V012" min="1" value="1">
+      <button onclick="addToCart('V012')">Add to Cart</button>
+      <button onclick="order('V012')">Order Now</button>
+    </div>
+
+    
