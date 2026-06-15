@@ -106,17 +106,20 @@ body {
 }
 
 .hero-slideshow .slide img {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 50%; left: 30%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   z-index: 1;
   text-align: center;
+  width: 90%;
 }
 
 .hero-overlay h1 {
@@ -162,6 +165,21 @@ h2 {
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* SHOP SECTION */
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
 /* SHOP PRODUCTS */
@@ -224,11 +242,21 @@ button:hover {
 
 /* UPDATED SLIDESHOW IMAGE STYLING */
 .slideshow-container .slide img {
-  max-width: 300px;   /* slightly bigger than Explore Styles */
+  max-width: 300px;
+  width: 90%;
   height: auto;
   margin: 0 auto;
+  display: block;
   border-radius: 12px;
   object-fit: cover;
+}
+
+/* CATEGORIES GRID */
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* CATALOGUE GRID */
@@ -251,7 +279,7 @@ button:hover {
 }
 
 .kenya-flag {
-  max-width: 50px;
+  max-width: 30px;
   height: auto;
   border-radius: 4px;
 }
@@ -321,6 +349,11 @@ button:hover {
 
 }
 
+.delivery-info,
+.contact-us {
+  text-align: center;
+}
+
 .contact-us a {
   color: #fff;
   font-weight: bold;
@@ -328,4 +361,13 @@ button:hover {
 }
 .contact-us a:hover {
   color: #8a2be2;
+}
+
+/* SECTION HEADINGS CENTERED */
+.categories h2,
+.shop h2,
+.delivery-info h2,
+.contact-us h2,
+.reviews h2 {
+  text-align: center;
 }
