@@ -5,6 +5,8 @@ body {
   background: black;
   color: #f0f0f0;
   scroll-behavior: smooth;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* UTILITY BAR */
@@ -268,6 +270,9 @@ button:hover {
     margin: 20px auto;
     height: auto;          /* allow expansion */
     margin-bottom: 40px;   /* push down under Best Sellers */
+    padding: 60px 20px;
+    margin-bottom: 60px;
+    min-height: 80vh;
   }
 
   .slideshow-container .slide img {
