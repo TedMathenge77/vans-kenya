@@ -172,6 +172,10 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: -60px; /* overlap into slideshow */
+  background: transparent;
 }
 
 .products-row {
@@ -188,6 +192,7 @@ h2 {
 }
 
 .product-img {
+  width: 100%;
   max-width: 250px;
   height: auto;
   border-radius: 12px;
@@ -197,6 +202,7 @@ h2 {
 
 /* VIDEO STYLING */
 .video-pro {
+  width: 100%;
   max-width: 250px;
   height: auto;
   border-radius: 12px;
@@ -226,10 +232,9 @@ button:hover {
 .slideshow-container {
   width: 100%;
   position: relative;
-  margin: 40px auto;
+  margin: 20px auto 0 auto;
   text-align: center;
-  height: 400px;
-  
+  height: 450px; /* taller so it bleeds into Best Sellers */
 }
 
 .slideshow-container .slide {
@@ -240,10 +245,9 @@ button:hover {
   transition: opacity 1.5s ease-in-out;
 }
 
-/* UPDATED SLIDESHOW IMAGE STYLING */
 .slideshow-container .slide img {
+  width: 100%;
   max-width: 300px;
-  width: 90%;
   height: auto;
   margin: 0 auto;
   display: block;
@@ -253,9 +257,8 @@ button:hover {
 
 /* CATEGORIES GRID */
 .categories-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -295,21 +298,26 @@ button:hover {
   }
 
   .slideshow-container {
-    margin: 20px auto;
-    height: auto;          /* allow expansion */
-    margin-bottom: 40px;   /* push down under Best Sellers */
-    padding: 60px 20px;
-    margin-bottom: 60px;
-    min-height: 80vh;
+    margin: 10px auto 0 auto;
+    height: auto;
+    padding: 10px;
+    min-height: auto;
   }
 
-  .slideshow-container .slide img {
-    width: 90%;            /* fill most of phone width */
-    max-width: none;       /* remove fixed cap */
+  .slideshow-container .slide img,
+  .product-img,
+  .video-pro {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .catalogue-grid {
     grid-template-columns: 1fr;
+  }
+
+  .shop {
+    margin-top: -40px; /* smaller overlap on phones */
   }
 }
 
@@ -346,7 +354,6 @@ button:hover {
   transform: translateY(40px);
   transition: all 0.8s ease;
   width: 100%;
-
 }
 
 .delivery-info,
