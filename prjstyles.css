@@ -127,10 +127,10 @@ button:hover { background: #8a2be2; transform: scale(1.05); }
   width: 100%; height: 100%;
   opacity: 0; transition: opacity 1.5s ease-in-out;
 }
-/* Smaller, centered slideshow images with fixed height */
+/* Smaller, centered slideshow images with adaptive height */
 .slideshow-container .slide img {
   width: auto; max-width: 90%;
-  height: 300px; /* ensures visible height in portrait */
+  height: auto; max-height: 400px; /* cap height */
   margin: 0 auto; display: block;
   border-radius: 12px; object-fit: contain;
 }
@@ -159,8 +159,8 @@ button:hover { background: #8a2be2; transform: scale(1.05); }
     min-height: auto;
   }
   .slideshow-container .slide img {
-    width: 90%; max-width: 250px;
-    height: auto; max-height: 300px;
+    width: 100%; max-width: 250px;
+    height: auto; max-height: 250px; /* portrait fix */
     object-fit: contain;
   }
   .product-img, .video-pro {
