@@ -152,11 +152,10 @@ function startSlideshow(containerSelector, interval = 4000) {
     next.style.opacity = 1;
 
     index = (index + 1) % slides.length;
-    setTimeout(show, interval);
   }
 
   if (slides.length > 1) {
-    setTimeout(show, interval);
+    setInterval(show, interval); // continuous loop
   }
 }
 
