@@ -197,3 +197,12 @@ button:hover { background: #8a2be2; transform: scale(1.05); }
 /* HEADINGS CENTERED */
 .categories h2, .shop h2, .delivery-info h2,
 .contact-us h2, .reviews h2 { text-align: center; }
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .slideshow-container img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* adjust as needed */
+    object-fit: contain;
+  }
+}
