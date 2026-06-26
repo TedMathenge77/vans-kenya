@@ -162,26 +162,20 @@ button:hover { background: #8a2be2; transform: scale(1.05); }
   .hero-overlay h1 { font-size: 1.4rem; }
   .categories-grid { grid-template-columns: 1fr; }
 
-  /* Hero slideshow: same height, 30% less width */
   .hero-slideshow .slide img {
-    width: 70%;        /* reduced from 100% to 70% */
-    height: 80vh;      /* keep same height */
+    height: 80vh;
     object-fit: cover;
-    margin: 0 auto;    /* center horizontally */
   }
 
   .slideshow-container {
     margin: 10px auto 0 auto;
-    height: auto;
+    height: 60vh;
     padding: 10px;
   }
-
-  /* Existing slideshow: 20% less width & height */
   .slideshow-container .slide img {
-    width: 80%;        /* reduced from 100% to 80% */
-    height: 80%;       /* reduced from 100% to 80% */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin: 0 auto;
   }
 
   .product-img, .video-pro {
