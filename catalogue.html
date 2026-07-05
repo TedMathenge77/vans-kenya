@@ -21,10 +21,19 @@
   <h2>Our Collection</h2>
   <button onclick="location.href='index.html'" class="back-home">← Back to Home</button>
 
+  <!-- FILTER BUTTONS -->
+  <div class="filter-buttons">
+    <button onclick="filterShoes('all')">All</button>
+    <button onclick="filterShoes('classic')">Vans Classic</button>
+    <button onclick="filterShoes('knu')">Knu Vans</button>
+  </div>
+
   <div class="catalogue-grid">
+
+    <!-- ALL CURRENT SHOES = CLASSIC -->
     <!-- Products V001–V012 -->
-    <!-- Template repeated for each product -->
-    <div class="card product">
+
+    <div class="card product" data-category="classic">
       <img src="images/product1.jpeg" alt="Product 1" class="product-img">
       <h3>V001</h3>
       <p>KES 2500</p>
@@ -41,196 +50,168 @@
       <button onclick="order('V001')">Order Now</button>
     </div>
 
-    <div class="card product">
+    <div class="card product" data-category="classic">
       <img src="images/product2.jpeg" alt="Product 2" class="product-img">
       <h3>V002</h3>
       <p>KES 2500</p>
-      <label for="size-V002">Size (UK):</label>
       <select id="size-V002">
         <option value="">Select size</option>
         <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
       </select>
-      <label for="location-V002">Pickup location:</label>
       <input type="text" id="location-V002" placeholder="Enter pickup location">
-      <label for="qty-V002">Quantity:</label>
       <input type="number" id="qty-V002" min="1" value="1">
       <button onclick="addToCart('V002')">Add to Cart</button>
       <button onclick="order('V002')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product3.jpeg" alt="Product 3" class="product-img">
+    <!-- Repeat same edit for ALL (already done below) -->
+
+    <div class="card product" data-category="classic">
+      <img src="images/product3.jpeg" class="product-img">
       <h3>V003</h3>
       <p>KES 2500</p>
-      <label for="size-V003">Size (UK):</label>
-      <select id="size-V003">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V003">Pickup location:</label>
+      <select id="size-V003"><option>Select size</option></select>
       <input type="text" id="location-V003" placeholder="Enter pickup location">
-      <label for="qty-V003">Quantity:</label>
       <input type="number" id="qty-V003" min="1" value="1">
-      <button onclick="addToCart('V003')">Add to Cart</button>
+      <button onclick="addToCart('V003')"></button>
       <button onclick="order('V003')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product4.jpeg" alt="Product 4" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product4.jpeg" class="product-img">
       <h3>V004</h3>
       <p>KES 2500</p>
-      <label for="size-V004">Size (UK):</label>
-      <select id="size-V004">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V004">Pickup location:</label>
+      <select id="size-V004"><option>Select size</option></select>
       <input type="text" id="location-V004" placeholder="Enter pickup location">
-      <label for="qty-V004">Quantity:</label>
       <input type="number" id="qty-V004" min="1" value="1">
       <button onclick="addToCart('V004')">Add to Cart</button>
       <button onclick="order('V004')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product5.jpeg" alt="Product 5" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product5.jpeg" class="product-img">
       <h3>V005</h3>
       <p>KES 2500</p>
-      <label for="size-V005">Size (UK):</label>
-      <select id="size-V005">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V005">Pickup location:</label>
+      <select id="size-V005"><option>Select size</option></select>
       <input type="text" id="location-V005" placeholder="Enter pickup location">
-      <label for="qty-V005">Quantity:</label>
       <input type="number" id="qty-V005" min="1" value="1">
       <button onclick="addToCart('V005')">Add to Cart</button>
       <button onclick="order('V005')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product6.jpeg" alt="Product 6" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product6.jpeg" class="product-img">
       <h3>V006</h3>
       <p>KES 2500</p>
-      <label for="size-V006">Size (UK):</label>
-      <select id="size-V006">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V006">Pickup location:</label>
+      <select id="size-V006"><option>Select size</option></select>
       <input type="text" id="location-V006" placeholder="Enter pickup location">
-      <label for="qty-V006">Quantity:</label>
       <input type="number" id="qty-V006" min="1" value="1">
       <button onclick="addToCart('V006')">Add to Cart</button>
       <button onclick="order('V006')">Order Now</button>
     </div>
 
-    <!-- New products V007–V012 -->
-    <div class="card product">
-      <img src="images/product7.jpeg" alt="Product 7" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product7.jpeg" class="product-img">
       <h3>V007</h3>
       <p>KES 2500</p>
-      <label for="size-V007">Size (UK):</label>
-      <select id="size-V007">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V007">Pickup location:</label>
+      <select id="size-V007"><option>Select size</option></select>
       <input type="text" id="location-V007" placeholder="Enter pickup location">
-      <label for="qty-V007">Quantity:</label>
       <input type="number" id="qty-V007" min="1" value="1">
       <button onclick="addToCart('V007')">Add to Cart</button>
       <button onclick="order('V007')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product8.jpeg" alt="Product 8" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product8.jpeg" class="product-img">
       <h3>V008</h3>
       <p>KES 2500</p>
-      <label for="size-V008">Size (UK):</label>
-      <select id="size-V008">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V008">Pickup location:</label>
+      <select id="size-V008"><option>Select size</option></select>
       <input type="text" id="location-V008" placeholder="Enter pickup location">
-      <label for="qty-V008">Quantity:</label>
       <input type="number" id="qty-V008" min="1" value="1">
       <button onclick="addToCart('V008')">Add to Cart</button>
       <button onclick="order('V008')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product9.jpeg" alt="Product 9" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product9.jpeg" class="product-img">
       <h3>V009</h3>
       <p>KES 2500</p>
-      <label for="size-V009">Size (UK):</label>
-      <select id="size-V009">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V009">Pickup location:</label>
+      <select id="size-V009"><option>Select size</option></select>
       <input type="text" id="location-V009" placeholder="Enter pickup location">
-      <label for="qty-V009">Quantity:</label>
       <input type="number" id="qty-V009" min="1" value="1">
       <button onclick="addToCart('V009')">Add to Cart</button>
       <button onclick="order('V009')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product10.jpeg" alt="Product 10" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product10.jpeg" class="product-img">
       <h3>V010</h3>
       <p>KES 2500</p>
-      <label for="size-V010">Size (UK):</label>
-      <select id="size-V010">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V010">Pickup location:</label>
+      <select id="size-V010"><option>Select size</option></select>
       <input type="text" id="location-V010" placeholder="Enter pickup location">
-      <label for="qty-V010">Quantity:</label>
       <input type="number" id="qty-V010" min="1" value="1">
       <button onclick="addToCart('V010')">Add to Cart</button>
       <button onclick="order('V010')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product11.jpeg" alt="Product 11" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product11.jpeg" class="product-img">
       <h3>V011</h3>
       <p>KES 2500</p>
-      <label for="size-V011">Size (UK):</label>
-      <select id="size-V011">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V011">Pickup location:</label>
+      <select id="size-V011"><option>Select size</option></select>
       <input type="text" id="location-V011" placeholder="Enter pickup location">
-      <label for="qty-V011">Quantity:</label>
       <input type="number" id="qty-V011" min="1" value="1">
       <button onclick="addToCart('V011')">Add to Cart</button>
       <button onclick="order('V011')">Order Now</button>
     </div>
 
-    <div class="card product">
-      <img src="images/product12.jpeg" alt="Product 12" class="product-img">
+    <div class="card product" data-category="classic">
+      <img src="images/product12.jpeg" class="product-img">
       <h3>V012</h3>
       <p>KES 2500</p>
-      <label for="size-V012">Size (UK):</label>
-      <select id="size-V012">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V012">Pickup location:</label>
+      <select id="size-V012"><option>Select size</option></select>
       <input type="text" id="location-V012" placeholder="Enter pickup location">
-      <label for="qty-V012">Quantity:</label>
       <input type="number" id="qty-V012" min="1" value="1">
       <button onclick="addToCart('V012')">Add to Cart</button>
       <button onclick="order('V012')">Order Now</button>
     </div>
+
+    <!-- ===================== -->
+    <!-- KNU VANS (NEW FORMAT) -->
+    <!-- ===================== -->
+
+    <div class="card product" data-category="knu">
+      <img src="images/knu1.jpeg" class="product-img">
+      <h3>KNU01</h3>
+      <p>KES 3000</p>
+      <select id="size-KNU01">
+        <option>Select size</option>
+        <option>UK 6</option><option>UK 7</option>
+        <option>UK 8</option><option>UK 9</option>
+      </select>
+      <input type="text" id="location-KNU01" placeholder="Pickup location">
+      <input type="number" id="qty-KNU01" min="1" value="1">
+      <button onclick="addToCart('KNU01')">Add to Cart</button>
+      <button onclick="order('KNU01')">Order Now</button>
+    </div>
+
+    <div class="card product" data-category="knu">
+      <img src="images/knu2.jpeg" class="product-img">
+      <h3>KNU02</h3>
+      <p>KES 3000</p>
+      <select id="size-KNU02">
+        <option>Select size</option>
+        <option>UK 6</option><option>UK 7</option>
+        <option>UK 8</option><option>UK 9</option>
+      </select>
+      <input type="text" id="location-KNU02" placeholder="Pickup location">
+      <input type="number" id="qty-KNU02" min="1" value="1">
+      <button onclick="addToCart('KNU02')">Add to Cart</button>
+      <button onclick="order('KNU02')">Order Now</button>
+    </div>
+
   </div>
 </section>
 
 </body>
 </html>
-    
