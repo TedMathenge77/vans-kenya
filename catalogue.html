@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -22,687 +23,673 @@
   <button onclick="location.href='index.html'" class="back-home">← Back to Home</button>
 
   <!-- FILTER BUTTONS -->
+
   <div class="filter-buttons">
     <button onclick="filterShoes('all')">All</button>
     <button onclick="filterShoes('classic')">Vans Classic</button>
     <button onclick="filterShoes('knu')">Knu Vans</button>
     <button onclick="filterShoes('authentic')">Authentic Vans</button>
+    <button onclick="filterShoes('slip-on')">Slip-On Vans</button>
   </div>
 
   <div class="catalogue-grid">
 
-    <!-- ALL CURRENT SHOES = CLASSIC -->
-    <!-- Products V001–V012 -->
+```
+<!-- ===================== -->
+<!-- VANS CLASSIC -->
+<!-- V001–V012 -->
+<!-- ===================== -->
 
-    <div class="card product" data-category="classic">
-      <img src="images/product1.jpeg" alt="Product 1" class="product-img">
-      <h3>V001</h3>
-      <p>KES 2500</p>
-      <label for="size-V001">Size (UK):</label>
-      <select id="size-V001">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <label for="location-V001">Pickup location:</label>
-      <input type="text" id="location-V001" placeholder="Enter pickup location">
-      <label for="qty-V001">Quantity:</label>
-      <input type="number" id="qty-V001" min="1" value="1">
-      <button onclick="addToCart('V001')">Add to Cart</button>
-      <button onclick="order('V001')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product1.jpeg" alt="Product 1" class="product-img">
+  <h3>V001</h3>
+  <p>KES 2500</p>
+  <label for="size-V001">Size (UK):</label>
+  <select id="size-V001">
+    <option value="">Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+  </select>
+  <label for="location-V001">Pickup location:</label>
+  <input type="text" id="location-V001" placeholder="Enter pickup location">
+  <label for="qty-V001">Quantity:</label>
+  <input type="number" id="qty-V001" min="1" value="1">
+  <button onclick="addToCart('V001')">Add to Cart</button>
+  <button onclick="order('V001')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product2.jpeg" alt="Product 2" class="product-img">
-      <h3>V002</h3>
-      <p>KES 2500</p>
-      <select id="size-V002">
-        <option value="">Select size</option>
-        <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
-      </select>
-      <input type="text" id="location-V002" placeholder="Enter pickup location">
-      <input type="number" id="qty-V002" min="1" value="1">
-      <button onclick="addToCart('V002')">Add to Cart</button>
-      <button onclick="order('V002')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product2.jpeg" alt="Product 2" class="product-img">
+  <h3>V002</h3>
+  <p>KES 2500</p>
+  <select id="size-V002">
+    <option value="">Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option><option>UK 10</option>
+  </select>
+  <input type="text" id="location-V002" placeholder="Enter pickup location">
+  <input type="number" id="qty-V002" min="1" value="1">
+  <button onclick="addToCart('V002')">Add to Cart</button>
+  <button onclick="order('V002')">Order Now</button>
+</div>
 
-    <!-- Repeat same edit for ALL (already done below) -->
+<div class="card product" data-category="classic">
+  <img src="images/product3.jpeg" class="product-img">
+  <h3>V003</h3>
+  <p>KES 2500</p>
+  <select id="size-V003"><option>Select size</option></select>
+  <input type="text" id="location-V003" placeholder="Enter pickup location">
+  <input type="number" id="qty-V003" min="1" value="1">
+  <button onclick="addToCart('V003')">Add to Cart</button>
+  <button onclick="order('V003')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product3.jpeg" class="product-img">
-      <h3>V003</h3>
-      <p>KES 2500</p>
-      <select id="size-V003"><option>Select size</option></select>
-      <input type="text" id="location-V003" placeholder="Enter pickup location">
-      <input type="number" id="qty-V003" min="1" value="1">
-      <button onclick="addToCart('V003')"></button>
-      <button onclick="order('V003')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product4.jpeg" class="product-img">
+  <h3>V004</h3>
+  <p>KES 2500</p>
+  <select id="size-V004"><option>Select size</option></select>
+  <input type="text" id="location-V004" placeholder="Enter pickup location">
+  <input type="number" id="qty-V004" min="1" value="1">
+  <button onclick="addToCart('V004')">Add to Cart</button>
+  <button onclick="order('V004')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product4.jpeg" class="product-img">
-      <h3>V004</h3>
-      <p>KES 2500</p>
-      <select id="size-V004"><option>Select size</option></select>
-      <input type="text" id="location-V004" placeholder="Enter pickup location">
-      <input type="number" id="qty-V004" min="1" value="1">
-      <button onclick="addToCart('V004')">Add to Cart</button>
-      <button onclick="order('V004')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product5.jpeg" class="product-img">
+  <h3>V005</h3>
+  <p>KES 2500</p>
+  <select id="size-V005"><option>Select size</option></select>
+  <input type="text" id="location-V005" placeholder="Enter pickup location">
+  <input type="number" id="qty-V005" min="1" value="1">
+  <button onclick="addToCart('V005')">Add to Cart</button>
+  <button onclick="order('V005')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product5.jpeg" class="product-img">
-      <h3>V005</h3>
-      <p>KES 2500</p>
-      <select id="size-V005"><option>Select size</option></select>
-      <input type="text" id="location-V005" placeholder="Enter pickup location">
-      <input type="number" id="qty-V005" min="1" value="1">
-      <button onclick="addToCart('V005')">Add to Cart</button>
-      <button onclick="order('V005')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product6.jpeg" class="product-img">
+  <h3>V006</h3>
+  <p>KES 2500</p>
+  <select id="size-V006"><option>Select size</option></select>
+  <input type="text" id="location-V006" placeholder="Enter pickup location">
+  <input type="number" id="qty-V006" min="1" value="1">
+  <button onclick="addToCart('V006')">Add to Cart</button>
+  <button onclick="order('V006')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product6.jpeg" class="product-img">
-      <h3>V006</h3>
-      <p>KES 2500</p>
-      <select id="size-V006"><option>Select size</option></select>
-      <input type="text" id="location-V006" placeholder="Enter pickup location">
-      <input type="number" id="qty-V006" min="1" value="1">
-      <button onclick="addToCart('V006')">Add to Cart</button>
-      <button onclick="order('V006')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product7.jpeg" class="product-img">
+  <h3>V007</h3>
+  <p>KES 2500</p>
+  <select id="size-V007"><option>Select size</option></select>
+  <input type="text" id="location-V007" placeholder="Enter pickup location">
+  <input type="number" id="qty-V007" min="1" value="1">
+  <button onclick="addToCart('V007')">Add to Cart</button>
+  <button onclick="order('V007')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product7.jpeg" class="product-img">
-      <h3>V007</h3>
-      <p>KES 2500</p>
-      <select id="size-V007"><option>Select size</option></select>
-      <input type="text" id="location-V007" placeholder="Enter pickup location">
-      <input type="number" id="qty-V007" min="1" value="1">
-      <button onclick="addToCart('V007')">Add to Cart</button>
-      <button onclick="order('V007')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product8.jpeg" class="product-img">
+  <h3>V008</h3>
+  <p>KES 2500</p>
+  <select id="size-V008"><option>Select size</option></select>
+  <input type="text" id="location-V008" placeholder="Enter pickup location">
+  <input type="number" id="qty-V008" min="1" value="1">
+  <button onclick="addToCart('V008')">Add to Cart</button>
+  <button onclick="order('V008')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product8.jpeg" class="product-img">
-      <h3>V008</h3>
-      <p>KES 2500</p>
-      <select id="size-V008"><option>Select size</option></select>
-      <input type="text" id="location-V008" placeholder="Enter pickup location">
-      <input type="number" id="qty-V008" min="1" value="1">
-      <button onclick="addToCart('V008')">Add to Cart</button>
-      <button onclick="order('V008')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product9.jpeg" class="product-img">
+  <h3>V009</h3>
+  <p>KES 2500</p>
+  <select id="size-V009"><option>Select size</option></select>
+  <input type="text" id="location-V009" placeholder="Enter pickup location">
+  <input type="number" id="qty-V009" min="1" value="1">
+  <button onclick="addToCart('V009')">Add to Cart</button>
+  <button onclick="order('V009')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product9.jpeg" class="product-img">
-      <h3>V009</h3>
-      <p>KES 2500</p>
-      <select id="size-V009"><option>Select size</option></select>
-      <input type="text" id="location-V009" placeholder="Enter pickup location">
-      <input type="number" id="qty-V009" min="1" value="1">
-      <button onclick="addToCart('V009')">Add to Cart</button>
-      <button onclick="order('V009')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product10.jpeg" class="product-img">
+  <h3>V010</h3>
+  <p>KES 2500</p>
+  <select id="size-V010"><option>Select size</option></select>
+  <input type="text" id="location-V010" placeholder="Enter pickup location">
+  <input type="number" id="qty-V010" min="1" value="1">
+  <button onclick="addToCart('V010')">Add to Cart</button>
+  <button onclick="order('V010')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product10.jpeg" class="product-img">
-      <h3>V010</h3>
-      <p>KES 2500</p>
-      <select id="size-V010"><option>Select size</option></select>
-      <input type="text" id="location-V010" placeholder="Enter pickup location">
-      <input type="number" id="qty-V010" min="1" value="1">
-      <button onclick="addToCart('V010')">Add to Cart</button>
-      <button onclick="order('V010')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product11.jpeg" class="product-img">
+  <h3>V011</h3>
+  <p>KES 2500</p>
+  <select id="size-V011"><option>Select size</option></select>
+  <input type="text" id="location-V011" placeholder="Enter pickup location">
+  <input type="number" id="qty-V011" min="1" value="1">
+  <button onclick="addToCart('V011')">Add to Cart</button>
+  <button onclick="order('V011')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="classic">
-      <img src="images/product11.jpeg" class="product-img">
-      <h3>V011</h3>
-      <p>KES 2500</p>
-      <select id="size-V011"><option>Select size</option></select>
-      <input type="text" id="location-V011" placeholder="Enter pickup location">
-      <input type="number" id="qty-V011" min="1" value="1">
-      <button onclick="addToCart('V011')">Add to Cart</button>
-      <button onclick="order('V011')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="classic">
-      <img src="images/product12.jpeg" class="product-img">
-      <h3>V012</h3>
-      <p>KES 2500</p>
-      <select id="size-V012"><option>Select size</option></select>
-      <input type="text" id="location-V012" placeholder="Enter pickup location">
-      <input type="number" id="qty-V012" min="1" value="1">
-      <button onclick="addToCart('V012')">Add to Cart</button>
-      <button onclick="order('V012')">Order Now</button>
-    </div>
-
-    <!-- ===================== -->
-    <!-- KNU VANS (NEW FORMAT) -->
-    <!-- ===================== -->
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu1.jpeg" class="product-img">
-      <h3>KNU01</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU01">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU01" placeholder="Pickup location">
-      <input type="number" id="qty-KNU01" min="1" value="1">
-      <button onclick="addToCart('KNU01')">Add to Cart</button>
-      <button onclick="order('KNU01')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu2.jpeg" class="product-img">
-      <h3>KNU02</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU02">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU02" placeholder="Pickup location">
-      <input type="number" id="qty-KNU02" min="1" value="1">
-      <button onclick="addToCart('KNU02')">Add to Cart</button>
-      <button onclick="order('KNU02')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu3.jpeg" class="product-img">
-      <h3>KNU03</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU03">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU03" placeholder="Pickup location">
-      <input type="number" id="qty-KNU03" min="1" value="1">
-      <button onclick="addToCart('KNU03')">Add to Cart</button>
-      <button onclick="order('KNU03')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu4.jpeg" class="product-img">
-      <h3>KNU04</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU04">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU04" placeholder="Pickup location">
-      <input type="number" id="qty-KNU04" min="1" value="1">
-      <button onclick="addToCart('KNU04')">Add to Cart</button>
-      <button onclick="order('KNU04')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu5.jpeg" class="product-img">
-      <h3>KNU05</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU05">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU05" placeholder="Pickup location">
-      <input type="number" id="qty-KNU05" min="1" value="1">
-      <button onclick="addToCart('KNU05')">Add to Cart</button>
-      <button onclick="order('KNU05')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu6.jpeg" class="product-img">
-      <h3>KNU06</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU06">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU06" placeholder="Pickup location">
-      <input type="number" id="qty-KNU06" min="1" value="1">
-      <button onclick="addToCart('KNU06')">Add to Cart</button>
-      <button onclick="order('KNU06')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu7.jpeg" class="product-img">
-      <h3>KNU07</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU07">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU07" placeholder="Pickup location">
-      <input type="number" id="qty-KNU07" min="1" value="1">
-      <button onclick="addToCart('KNU07')">Add to Cart</button>
-      <button onclick="order('KNU07')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu8.jpeg" class="product-img">
-      <h3>KNU08</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU08">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU08" placeholder="Pickup location">
-      <input type="number" id="qty-KNU08" min="1" value="1">
-      <button onclick="addToCart('KNU08')">Add to Cart</button>
-      <button onclick="order('KNU08')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu9.jpeg" class="product-img">
-      <h3>KNU09</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU09">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU09" placeholder="Pickup location">
-      <input type="number" id="qty-KNU09" min="1" value="1">
-      <button onclick="addToCart('KNU09')">Add to Cart</button>
-      <button onclick="order('KNU09')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/knu10.jpeg" class="product-img">
-      <h3>KNU10</h3>
-      <p>KES 2000</p>
-      <select id="size-KNU10">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-KNU10" placeholder="Pickup location">
-      <input type="number" id="qty-KNU10" min="1" value="1">
-      <button onclick="addToCart('KNU10')">Add to Cart</button>
-      <button onclick="order('KNU10')">Order Now</button>
-    </div>
-
-        <!-- ===================== -->
-    <!-- AUTHENTIC VANS (NEW FORMAT) -->
-    <!-- ===================== -->
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth0.jpeg" class="product-img">
-      <h3>AUTH0</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH0">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH0" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH0" min="1" value="1">
-      <button onclick="addToCart('AUTH0')">Add to Cart</button>
-      <button onclick="order('AUTH0')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth1.jpeg" class="product-img">
-      <h3>AUTH1</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH1">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH1" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH1" min="1" value="1">
-      <button onclick="addToCart('AUTH1')">Add to Cart</button>
-      <button onclick="order('AUTH1')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth2.jpeg" class="product-img">
-      <h3>AUTH2</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH2">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH2" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH2" min="1" value="1">
-      <button onclick="addToCart('AUTH2')">Add to Cart</button>
-      <button onclick="order('AUTH2')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth3.jpeg" class="product-img">
-      <h3>AUTH3</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH3">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH3" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH3" min="1" value="1">
-      <button onclick="addToCart('AUTH3')">Add to Cart</button>
-      <button onclick="order('AUTH3')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth4.jpeg" class="product-img">
-      <h3>AUTH4</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH4">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH4" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH4" min="1" value="1">
-      <button onclick="addToCart('AUTH4')">Add to Cart</button>
-      <button onclick="order('AUTH4')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth5.jpeg" class="product-img">
-      <h3>AUTH5</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH5">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH5" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH5" min="1" value="1">
-      <button onclick="addToCart('AUTH5')">Add to Cart</button>
-      <button onclick="order('AUTH5')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth6.jpeg" class="product-img">
-      <h3>AUTH6</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH6">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH6" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH6" min="1" value="1">
-      <button onclick="addToCart('AUTH6')">Add to Cart</button>
-      <button onclick="order('AUTH6')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth7.jpeg" class="product-img">
-      <h3>AUTH7</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH7">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH7" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH7" min="1" value="1">
-      <button onclick="addToCart('AUTH7')">Add to Cart</button>
-      <button onclick="order('AUTH7')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth8.jpeg" class="product-img">
-      .jpeg" class="product-img">
-      <h3>AUTH8</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH8">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH8" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH8" min="1" value="1">
-      <button onclick="addToCart('AUTH8')">Add to Cart</button>
-      <button onclick="order('AUTH8')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth9.jpeg" class="product-img">
-      <h3>AUTH9</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH9">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH9" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH9" min="1" value="1">
-      <button onclick="addToCart('AUTH9')">Add to Cart</button>
-      <button onclick="order('AUTH9')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth10.jpeg" class="product-img">
-      <h3>AUTH10</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH10">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH10" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH10" min="1" value="1">
-      <button onclick="addToCart('AUTH10')">Add to Cart</button>
-      <button onclick="order('AUTH10')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth11.jpeg" class="product-img">
-      <h3>AUTH11</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH11">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH11" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH11" min="1" value="1">
-      <button onclick="addToCart('AUTH11')">Add to Cart</button>
-      <button onclick="order('AUTH11')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth0.jpeg" class="product-img">
-      <h3>AUTH0</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH12">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH12" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH12" min="1" value="1">
-      <button onclick="addToCart('AUTH12')">Add to Cart</button>
-      <button onclick="order('AUTH12')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth13.jpeg" class="product-img">
-      <h3>AUTH13</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH13">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH13" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH13" min="1" value="1">
-      <button onclick="addToCart('AUTH13')">Add to Cart</button>
-      <button onclick="order('AUTH13')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth14.jpeg" class="product-img">
-      <h3>AUTH14</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH14">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH14" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH14" min="1" value="1">
-      <button onclick="addToCart('AUTH14')">Add to Cart</button>
-      <button onclick="order('AUTH14')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth15.jpeg" class="product-img">
-      <h3>AUTH15</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH15">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH15" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH15" min="1" value="1">
-      <button onclick="addToCart('AUTH15')">Add to Cart</button>
-      <button onclick="order('AUTH15')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth16.jpeg" class="product-img">
-      <h3>AUTH16</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH16">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH16" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH16" min="1" value="1">
-      <button onclick="addToCart('AUTH16')">Add to Cart</button>
-      <button onclick="order('AUTH16')">Order Now</button>
-    </div>
-
-    <div class="card product" data-category="knu">
-      <img src="images/auth17.jpeg" class="product-img">
-      <h3>AUTH17</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH17">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH17" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH17" min="1" value="1">
-      <button onclick="addToCart('AUTH17')">Add to Cart</button>
-      <button onclick="order('AUTH17')">Order Now</button>
-    </div>
-
-     <div class="card product" data-category="knu">
-      <img src="images/auth18.jpeg" class="product-img">
-      <h3>AUTH18</h3>
-      <p>KES 2000</p>
-      <select id="size-AUTH18">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-AUTH18" placeholder="Pickup location">
-      <input type="number" id="qty-AUTH18" min="1" value="1">
-      <button onclick="addToCart('AUTH18')">Add to Cart</button>
-      <button onclick="order('AUTH18')">Order Now</button>
-    </div>
+<div class="card product" data-category="classic">
+  <img src="images/product12.jpeg" class="product-img">
+  <h3>V012</h3>
+  <p>KES 2500</p>
+  <select id="size-V012"><option>Select size</option></select>
+  <input type="text" id="location-V012" placeholder="Enter pickup location">
+  <input type="number" id="qty-V012" min="1" value="1">
+  <button onclick="addToCart('V012')">Add to Cart</button>
+  <button onclick="order('V012')">Order Now</button>
+</div>
 
 
-            <!-- ===================== -->
-    <!-- SLIP ON VANS (NEW FORMAT) -->
-    <!-- ===================== -->
-
+<!-- ===================== -->
+<!-- KNU VANS -->
+<!-- KNU01–KNU10 -->
+<!-- ===================== -->
 
 <div class="card product" data-category="knu">
-      <img src="images/slip1.jpeg" class="product-img">
-      <h3>SLIP1</h3>
-      <p>KES 2000</p>
-      <select id="size-SLIP1">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-SLIP1" placeholder="Pickup location">
-      <input type="number" id="qty-SLIP1" min="1" value="1">
-      <button onclick="addToCart('SLIP1')">Add to Cart</button>
-      <button onclick="order('SLIP1')">Order Now</button>
-    </div>
+  <img src="images/knu1.jpeg" class="product-img">
+  <h3>KNU01</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU01">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU01" placeholder="Pickup location">
+  <input type="number" id="qty-KNU01" min="1" value="1">
+  <button onclick="addToCart('KNU01')">Add to Cart</button>
+  <button onclick="order('KNU01')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="knu">
-      <img src="images/slip2.jpeg" class="product-img">
-      <h3>SLIP2</h3>
-      <p>KES 2000</p>
-      <select id="size-SLIP2">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-SLIP2" placeholder="Pickup location">
-      <input type="number" id="qty-SLIP2" min="1" value="1">
-      <button onclick="addToCart('SLIP2')">Add to Cart</button>
-      <button onclick="order('SLIP2')">Order Now</button>
-    </div>
+<div class="card product" data-category="knu">
+  <img src="images/knu2.jpeg" class="product-img">
+  <h3>KNU02</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU02">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU02" placeholder="Pickup location">
+  <input type="number" id="qty-KNU02" min="1" value="1">
+  <button onclick="addToCart('KNU02')">Add to Cart</button>
+  <button onclick="order('KNU02')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu3.jpeg" class="product-img">
+  <h3>KNU03</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU03">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU03" placeholder="Pickup location">
+  <input type="number" id="qty-KNU03" min="1" value="1">
+  <button onclick="addToCart('KNU03')">Add to Cart</button>
+  <button onclick="order('KNU03')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu4.jpeg" class="product-img">
+  <h3>KNU04</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU04">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU04" placeholder="Pickup location">
+  <input type="number" id="qty-KNU04" min="1" value="1">
+  <button onclick="addToCart('KNU04')">Add to Cart</button>
+  <button onclick="order('KNU04')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu5.jpeg" class="product-img">
+  <h3>KNU05</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU05">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU05" placeholder="Pickup location">
+  <input type="number" id="qty-KNU05" min="1" value="1">
+  <button onclick="addToCart('KNU05')">Add to Cart</button>
+  <button onclick="order('KNU05')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu6.jpeg" class="product-img">
+  <h3>KNU06</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU06">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU06" placeholder="Pickup location">
+  <input type="number" id="qty-KNU06" min="1" value="1">
+  <button onclick="addToCart('KNU06')">Add to Cart</button>
+  <button onclick="order('KNU06')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu7.jpeg" class="product-img">
+  <h3>KNU07</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU07">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU07" placeholder="Pickup location">
+  <input type="number" id="qty-KNU07" min="1" value="1">
+  <button onclick="addToCart('KNU07')">Add to Cart</button>
+  <button onclick="order('KNU07')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu8.jpeg" class="product-img">
+  <h3>KNU08</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU08">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU08" placeholder="Pickup location">
+  <input type="number" id="qty-KNU08" min="1" value="1">
+  <button onclick="addToCart('KNU08')">Add to Cart</button>
+  <button onclick="order('KNU08')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu9.jpeg" class="product-img">
+  <h3>KNU09</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU09">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU09" placeholder="Pickup location">
+  <input type="number" id="qty-KNU09" min="1" value="1">
+  <button onclick="addToCart('KNU09')">Add to Cart</button>
+  <button onclick="order('KNU09')">Order Now</button>
+</div>
+
+<div class="card product" data-category="knu">
+  <img src="images/knu10.jpeg" class="product-img">
+  <h3>KNU10</h3>
+  <p>KES 2000</p>
+  <select id="size-KNU10">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-KNU10" placeholder="Pickup location">
+  <input type="number" id="qty-KNU10" min="1" value="1">
+  <button onclick="addToCart('KNU10')">Add to Cart</button>
+  <button onclick="order('KNU10')">Order Now</button>
+</div>
 
 
-    <div class="card product" data-category="knu">
-      <img src="images/slip3.jpeg" class="product-img">
-      <h3>SLIP3</h3>
-      <p>KES 2000</p>
-      <select id="size-SLIP3">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-SLIP3" placeholder="Pickup location">
-      <input type="number" id="qty-SLIP3" min="1" value="1">
-      <button onclick="addToCart('SLIP3')">Add to Cart</button>
-      <button onclick="order('SLIP3')">Order Now</button>
-    </div>
+<!-- ===================== -->
+<!-- AUTHENTIC VANS -->
+<!-- AUTH0–AUTH18 -->
+<!-- ===================== -->
 
-    <div class="card product" data-category="knu">
-      <img src="images/slip4.jpeg" class="product-img">
-      <h3>SLIP4</h3>
-      <p>KES 2000</p>
-      <select id="size-SLIP4">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-SLIP4" placeholder="Pickup location">
-      <input type="number" id="qty-SLIP4" min="1" value="1">
-      <button onclick="addToCart('SLIP4')">Add to Cart</button>
-      <button onclick="order('SLIP4')">Order Now</button>
-    </div>
+<div class="card product" data-category="authentic">
+  <img src="images/auth0.jpeg" class="product-img">
+  <h3>AUTH0</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH0">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH0" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH0" min="1" value="1">
+  <button onclick="addToCart('AUTH0')">Add to Cart</button>
+  <button onclick="order('AUTH0')">Order Now</button>
+</div>
 
-    <div class="card product" data-category="knu">
-      <img src="images/slip5.jpeg" class="product-img">
-      <h3>SLIP5</h3>
-      <p>KES 2000</p>
-      <select id="size-SLIP5">
-        <option>Select size</option>
-        <option>UK 6</option><option>UK 7</option>
-        <option>UK 8</option><option>UK 9</option>
-      </select>
-      <input type="text" id="location-SLIP5" placeholder="Pickup location">
-      <input type="number" id="qty-SLIP5" min="1" value="1">
-      <button onclick="addToCart('SLIP5')">Add to Cart</button>
-      <button onclick="order('SLIP5')">Order Now</button>
-    </div>
+<div class="card product" data-category="authentic">
+  <img src="images/auth1.jpeg" class="product-img">
+  <h3>AUTH1</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH1">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH1" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH1" min="1" value="1">
+  <button onclick="addToCart('AUTH1')">Add to Cart</button>
+  <button onclick="order('AUTH1')">Order Now</button>
+</div>
 
+<div class="card product" data-category="authentic">
+  <img src="images/auth2.jpeg" class="product-img">
+  <h3>AUTH2</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH2">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH2" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH2" min="1" value="1">
+  <button onclick="addToCart('AUTH2')">Add to Cart</button>
+  <button onclick="order('AUTH2')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth3.jpeg" class="product-img">
+  <h3>AUTH3</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH3">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH3" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH3" min="1" value="1">
+  <button onclick="addToCart('AUTH3')">Add to Cart</button>
+  <button onclick="order('AUTH3')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth4.jpeg" class="product-img">
+  <h3>AUTH4</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH4">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH4" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH4" min="1" value="1">
+  <button onclick="addToCart('AUTH4')">Add to Cart</button>
+  <button onclick="order('AUTH4')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth5.jpeg" class="product-img">
+  <h3>AUTH5</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH5">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH5" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH5" min="1" value="1">
+  <button onclick="addToCart('AUTH5')">Add to Cart</button>
+  <button onclick="order('AUTH5')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth6.jpeg" class="product-img">
+  <h3>AUTH6</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH6">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH6" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH6" min="1" value="1">
+  <button onclick="addToCart('AUTH6')">Add to Cart</button>
+  <button onclick="order('AUTH6')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth7.jpeg" class="product-img">
+  <h3>AUTH7</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH7">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH7" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH7" min="1" value="1">
+  <button onclick="addToCart('AUTH7')">Add to Cart</button>
+  <button onclick="order('AUTH7')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth8.jpeg" class="product-img">
+  <h3>AUTH8</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH8">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH8" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH8" min="1" value="1">
+  <button onclick="addToCart('AUTH8')">Add to Cart</button>
+  <button onclick="order('AUTH8')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth9.jpeg" class="product-img">
+  <h3>AUTH9</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH9">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH9" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH9" min="1" value="1">
+  <button onclick="addToCart('AUTH9')">Add to Cart</button>
+  <button onclick="order('AUTH9')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth10.jpeg" class="product-img">
+  <h3>AUTH10</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH10">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH10" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH10" min="1" value="1">
+  <button onclick="addToCart('AUTH10')">Add to Cart</button>
+  <button onclick="order('AUTH10')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth11.jpeg" class="product-img">
+  <h3>AUTH11</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH11">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH11" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH11" min="1" value="1">
+  <button onclick="addToCart('AUTH11')">Add to Cart</button>
+  <button onclick="order('AUTH11')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth12.jpeg" class="product-img">
+  <h3>AUTH12</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH12">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH12" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH12" min="1" value="1">
+  <button onclick="addToCart('AUTH12')">Add to Cart</button>
+  <button onclick="order('AUTH12')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth13.jpeg" class="product-img">
+  <h3>AUTH13</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH13">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH13" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH13" min="1" value="1">
+  <button onclick="addToCart('AUTH13')">Add to Cart</button>
+  <button onclick="order('AUTH13')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth14.jpeg" class="product-img">
+  <h3>AUTH14</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH14">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH14" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH14" min="1" value="1">
+  <button onclick="addToCart('AUTH14')">Add to Cart</button>
+  <button onclick="order('AUTH14')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth15.jpeg" class="product-img">
+  <h3>AUTH15</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH15">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH15" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH15" min="1" value="1">
+  <button onclick="addToCart('AUTH15')">Add to Cart</button>
+  <button onclick="order('AUTH15')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth16.jpeg" class="product-img">
+  <h3>AUTH16</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH16">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH16" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH16" min="1" value="1">
+  <button onclick="addToCart('AUTH16')">Add to Cart</button>
+  <button onclick="order('AUTH16')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth17.jpeg" class="product-img">
+  <h3>AUTH17</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH17">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH17" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH17" min="1" value="1">
+  <button onclick="addToCart('AUTH17')">Add to Cart</button>
+  <button onclick="order('AUTH17')">Order Now</button>
+</div>
+
+<div class="card product" data-category="authentic">
+  <img src="images/auth18.jpeg" class="product-img">
+  <h3>AUTH18</h3>
+  <p>KES 2000</p>
+  <select id="size-AUTH18">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option><option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-AUTH18" placeholder="Pickup location">
+  <input type="number" id="qty-AUTH18" min="1" value="1">
+  <button onclick="addToCart('AUTH18')">Add to Cart</button>
+  <button onclick="order('AUTH18')">Order Now</button>
+</div>
+
+
+<!-- ===================== -->
+<!-- SLIP-ON VANS -->
+<!-- SLIP1–SLIP5 -->
+<!-- ===================== -->
+
+<div class="card product" data-category="slip-on">
+  <img src="images/slip1.jpeg" class="product-img">
+  <h3>SLIP1</h3>
+  <p>KES 2000</p>
+  <select id="size-SLIP1">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-SLIP1" placeholder="Pickup location">
+  <input type="number" id="qty-SLIP1" min="1" value="1">
+  <button onclick="addToCart('SLIP1')">Add to Cart</button>
+  <button onclick="order('SLIP1')">Order Now</button>
+</div>
+
+<div class="card product" data-category="slip-on">
+  <img src="images/slip2.jpeg" class="product-img">
+  <h3>SLIP2</h3>
+  <p>KES 2000</p>
+  <select id="size-SLIP2">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-SLIP2" placeholder="Pickup location">
+  <input type="number" id="qty-SLIP2" min="1" value="1">
+  <button onclick="addToCart('SLIP2')">Add to Cart</button>
+  <button onclick="order('SLIP2')">Order Now</button>
+</div>
+
+<div class="card product" data-category="slip-on">
+  <img src="images/slip3.jpeg" class="product-img">
+  <h3>SLIP3</h3>
+  <p>KES 2000</p>
+  <select id="size-SLIP3">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-SLIP3" placeholder="Pickup location">
+  <input type="number" id="qty-SLIP3" min="1" value="1">
+  <button onclick="addToCart('SLIP3')">Add to Cart</button>
+  <button onclick="order('SLIP3')">Order Now</button>
+</div>
+
+<div class="card product" data-category="slip-on">
+  <img src="images/slip4.jpeg" class="product-img">
+  <h3>SLIP4</h3>
+  <p>KES 2000</p>
+  <select id="size-SLIP4">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-SLIP4" placeholder="Pickup location">
+  <input type="number" id="qty-SLIP4" min="1" value="1">
+  <button onclick="addToCart('SLIP4')">Add to Cart</button>
+  <button onclick="order('SLIP4')">Order Now</button>
+</div>
+
+<div class="card product" data-category="slip-on">
+  <img src="images/slip5.jpeg" class="product-img">
+  <h3>SLIP5</h3>
+  <p>KES 2000</p>
+  <select id="size-SLIP5">
+    <option>Select size</option>
+    <option>UK 6</option><option>UK 7</option>
+    <option>UK 8</option><option>UK 9</option>
+  </select>
+  <input type="text" id="location-SLIP5" placeholder="Pickup location">
+  <input type="number" id="qty-SLIP5" min="1" value="1">
+  <button onclick="addToCart('SLIP5')">Add to Cart</button>
+  <button onclick="order('SLIP5')">Order Now</button>
+</div>
+```
 
   </div>
 </section>
