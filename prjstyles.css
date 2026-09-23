@@ -66,10 +66,10 @@ body {
 }
 .hero-slideshow .slide img {
   width: auto;
-  max-width: 400px;   /* match category product size */
+  max-width: 400px;
   height: auto;
-  max-height: 800px;  /* keep proportions */
-  margin: 0 auto;     /* center horizontally */
+  max-height: 800px;
+  margin: 0 auto;
   object-fit: contain;
 }
 .hero-overlay {
@@ -100,7 +100,7 @@ h2 { margin-bottom: 20px; font-size: 1.8rem; }
 .shop {
   display: flex; flex-direction: column; align-items: center;
   position: relative; z-index: 1;
-  margin-top: -60px; /* overlap into slideshow */
+  margin-top: -60px;
   background: transparent;
 }
 .products-row {
@@ -121,6 +121,22 @@ button {
 }
 button:hover { background: #8a2be2; transform: scale(1.05); }
 
+/* FILTER BUTTONS */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.filter-buttons button {
+  margin: 0;
+}
+
 /* SLIDESHOW (categories section) */
 .slideshow-container {
   width: 100%; position: relative;
@@ -134,10 +150,10 @@ button:hover { background: #8a2be2; transform: scale(1.05); }
 }
 .slideshow-container .slide img {
   width: auto;
-  max-width: 400px;   /* same as product images */
+  max-width: 400px;
   height: auto;
-  max-height: 1000px;  /* keep proportions */
-  margin: 0 auto;     /* center horizontally */
+  max-height: 1000px;
+  margin: 0 auto;
   display: block;
   object-fit: contain;
 }
@@ -183,6 +199,19 @@ button:hover { background: #8a2be2; transform: scale(1.05); }
   }
   .catalogue-grid { grid-template-columns: 1fr; }
   .shop { margin-top: -40px; }
+
+  /* CENTER FILTER BUTTONS ON MOBILE */
+  .filter-buttons {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .filter-buttons button {
+    margin: 0;
+  }
 }
 
 /* REVIEWS */
@@ -211,5 +240,5 @@ button:hover { background: #8a2be2; transform: scale(1.05); }
 /* Center footer text */
 .footer p {
   text-align: center;
-  margin: 0;   /* optional: remove extra spacing */
+  margin: 0;
 }
